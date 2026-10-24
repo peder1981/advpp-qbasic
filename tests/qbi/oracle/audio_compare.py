@@ -11,8 +11,19 @@ for line in orig_txt.split('\n'):
     if len(p) == 2 and p[0].isdigit():
         orig.append((int(p[0]), int(p[1])))
 # descarta silencios e segmentos muito curtos
-o = [(f, d) for f, d in ours if f > 0 and d >= 150]
-r = [(f, d) for f, d in orig if f > 0 and d >= 150]
+def junta(segs):
+    # trechos contiguos de mesma frequencia (ex.: SOUND 261 seguido de PLAY C O2) viram um
+    out = []
+    for f, d in segs:
+        if out and f > 0 and abs(out[-1][0] - f) <= 5:
+            out[-1] = (out[-1][0], out[-1][1] + d)
+        else:
+            out.append((f, d))
+    return out
+o = [(f, d) for f, d in junta(ours) if f > 0 and d >= 150]
+# tom residual do DOSBox (~1288 Hz) que segue as notas no original; nao reproduzido por nos
+RESIDUO_ORIGINAL = range(1280, 1297)
+r = [(f, d) for f, d in junta([x for x in orig if x[0] not in RESIDUO_ORIGINAL]) if f > 0 and d >= 150]
 print('nossa :', [(f, int(d)) for f, d in o])
 print('QBASIC:', r)
 ok = len(o) == len(r)
