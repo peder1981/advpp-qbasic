@@ -1,0 +1,24 @@
+' Oraculo grafico: desenha em SCREEN 9 e grava POINT() em GFXRES.TXT.
+' Mesmo programa roda no QBASIC original (DOSBox-X) e no interpretador.
+SCREEN 9
+DIM arr(2000) AS INTEGER
+PSET (10, 10), 5
+LINE (0, 40)-(30, 40), 3
+LINE (50, 50)-(90, 80), 2, BF
+LINE (0, 0)-(9, 9), 4
+CIRCLE (200, 150), 30, 7
+PAINT (200, 150), 9, 7
+GET (50, 50)-(90, 80), arr
+PUT (120, 120), arr, XOR
+OPEN "GFXRES.TXT" FOR OUTPUT AS #1
+PRINT #1, "psetA"; POINT(10, 10)
+PRINT #1, "lineA"; POINT(15, 40); POINT(0, 40); POINT(30, 40); POINT(31, 40)
+PRINT #1, "bfB"; POINT(50, 50); POINT(90, 80); POINT(70, 65); POINT(91, 80)
+PRINT #1, "diag"; POINT(0, 0); POINT(4, 4); POINT(9, 9); POINT(5, 4)
+PRINT #1, "circ"; POINT(230, 150); POINT(170, 150); POINT(200, 150); POINT(260, 150)
+PRINT #1, "paint"; POINT(200, 160); POINT(200, 200)
+PRINT #1, "putA"; POINT(120, 120); POINT(135, 130); POINT(121, 121)
+PUT (120, 120), arr, XOR
+PRINT #1, "putB"; POINT(120, 120); POINT(135, 130)
+CLOSE #1
+SCREEN 0

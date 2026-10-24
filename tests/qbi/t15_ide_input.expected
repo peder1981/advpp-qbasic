@@ -1,0 +1,25 @@
+  File  Edit  View  Search  Run  Debug  Options  Help
+                                  UNTITLED.BAS
+INPUT X
+PRINT X*2
+
+
+
+
+
+
+
+
+
+
+
+
+  Immediate
+
+
+
+
+?
+ 42
+?
+<Shift+F1=Help> <F6=Window> <F2=Subs> <F5=Run> <F8=Step>    00002:001

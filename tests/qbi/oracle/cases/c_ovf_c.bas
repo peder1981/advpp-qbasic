@@ -1,0 +1,3 @@
+DEFINT A-Z
+a = 200
+PRINT a * a

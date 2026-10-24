@@ -1,0 +1,6 @@
+PRINT USING "###.##"; 3.14159
+PRINT USING "###.##"; 42
+PRINT USING "+##.#"; 2.5
+PRINT USING "$$#,###"; 1234
+PRINT USING "##"; 123
+PRINT USING "#.###^^^^"; 12345

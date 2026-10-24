@@ -1,0 +1,25 @@
+  File  Edit  View  Search  Run  Debug  Options  Help
+                                  UNTITLED.BAS
+PRINT 1
+PRINT 2
+PRINT 3
+
+
+
+
+
+
+
+
+
+
+
+  Immediate
+Breakpoint: linha 2
+ 1
+Interrompido no breakpoint, linha 2
+ 2
+ 3
+Fim do programa (passo).
+?
+<Shift+F1=Help> <F6=Window> <F2=Subs> <F5=Run> <F8=Step>    00003:001

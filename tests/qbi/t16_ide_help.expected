@@ -1,0 +1,25 @@
+  File  Edit  View  Search  Run  Debug  Options  Help
+                                  UNTITLED.BAS
+PRINT 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Immediate
+
+
+
+
+Defina QB_HLP com o caminho de QBASIC.HLP para a ajuda completa.
+PRINT: mostra valores na tela; ';' cola, ',' avanca a zona de 14 colunas
+?
+<Shift+F1=Help> <F6=Window> <F2=Subs> <F5=Run> <F8=Step>    00001:001

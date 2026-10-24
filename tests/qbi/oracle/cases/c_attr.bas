@@ -1,0 +1,7 @@
+COLOR 14, 4
+PRINT "amarelo"
+COLOR 7, 0
+PRINT "cinza"
+COLOR 1, 7
+LOCATE 5, 10
+PRINT "azul"
