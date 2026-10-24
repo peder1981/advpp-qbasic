@@ -1,0 +1,28 @@
+ 1 
+ 2 
+
+Pressione uma tecla para voltar ao editor.  File  Edit  View  Search  Run  Debug  Options  Help
+                                  UNTITLED.BAS
+FOR I = 1 TO 2
+PRINT I
+NEXT
+
+
+
+
+
+
+
+
+
+
+
+  Immediate
+
+
+
+
+> PRINT 6*7
+ 42
+?
+<Shift+F1=Help> <F6=Window> <F2=Subs> <F5=Run> <F8=Step>    00004:001

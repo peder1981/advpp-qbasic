@@ -1,0 +1,12 @@
+FOR V = 1 TO 5
+SELECT CASE V
+CASE 1: PRINT "one"
+CASE 2 TO 3: PRINT "two-three"
+CASE ELSE: PRINT "other"
+END SELECT
+NEXT
+S$ = "b"
+SELECT CASE S$
+CASE "a", "b"
+PRINT "ab"
+END SELECT
