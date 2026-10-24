@@ -1,0 +1,8 @@
+# artefatos gerados pelo transpilador (regeneraveis: bas2prg.prg / qbasic.prg)
+*_qb.prg
+# scratch e temporarios
+_*.prg
+m*_qb.prg
+tests/scratch/
+tests/*.tmp
+*.rpo

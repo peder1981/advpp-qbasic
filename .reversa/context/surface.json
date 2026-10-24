@@ -1,0 +1,16 @@
+{
+  "project": "qbasic-games-advpl",
+  "root": "/home/peder/Projetos/QBasic",
+  "languages": ["QBasic (legado)", "AdvPL (AdvPP)"],
+  "files": {
+    "advpp.json": "manifesto do projeto: nibbles.prg + gorilla.prg, compiler advplc",
+    "gorilla.bas": "GORILLAS.BAS IBM 1991 — 2301 linhas, artilharia turno a turno",
+    "gorilla.prg": "port AdvPL validado — 976 linhas, ANSI + física virtual 640x350",
+    "nibbles.bas": "NIBBLES.BAS Microsoft 1990 — 721 linhas, snake real-time",
+    "nibbles.prg": "port AdvPL validado — 930 linhas, arena 80x50 + key-stream"
+  },
+  "modules": ["gorillas", "nibbles"],
+  "external_integrations": ["advplc (compilador AdvPP em Go)", "terminal ANSI", "bash/stty (key-stream)"],
+  "database": "ausente",
+  "entry_points": ["User Function Main() em cada .prg"]
+}

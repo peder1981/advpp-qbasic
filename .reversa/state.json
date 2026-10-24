@@ -1,0 +1,16 @@
+{
+  "user_name": "peder",
+  "chat_language": "pt-br",
+  "doc_language": "Português",
+  "project": "qbasic-games-advpl",
+  "phase": "especificacao",
+  "doc_level": "detalhado",
+  "completed": ["scout", "archaeologist", "detective", "architect", "writer"],
+  "checkpoints": {
+    "scout": "2026-10-23",
+    "archaeologist": "2026-10-23",
+    "detective": "2026-10-23",
+    "architect": "2026-10-23",
+    "writer": "2026-10-23"
+  }
+}

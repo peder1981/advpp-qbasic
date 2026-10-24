@@ -1,0 +1,26 @@
+{
+  "name": "qbasic-games-advpl",
+  "version": "1.0.0",
+  "description": "Classic QBasic games reconstruidos em AdvPL puro",
+  "projects": {
+    "nibbles": {
+      "name": "nibbles",
+      "main": "nibbles.prg",
+      "files": ["nibbles.prg"]
+    },
+    "gorillas": {
+      "name": "gorillas",
+      "main": "gorilla.prg",
+      "files": ["gorilla.prg"]
+    },
+    "qbasic": {
+      "name": "qbasic",
+      "main": "qbasic.prg",
+      "files": ["qbasic.prg"]
+    }
+  },
+  "advpl": {
+    "compiler": "advplc",
+    "output": ".ch"
+  }
+}
