@@ -1229,6 +1229,8 @@ Static Function QiErrCode( cMsg )
         nC := 8
     ElseIf cMsg == "NEXT sem FOR"
         nC := 1
+    ElseIf cMsg == "Overflow"
+        nC := 6
     EndIf
 Return nC
 
