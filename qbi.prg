@@ -4036,6 +4036,21 @@ Static Function QiTermMode( lBlock )
 Return
 
 // INKEY$: tecla pendente ou "". Setas viram CHR$(0)+H/P/K/M (como no QBasic).
+// Byte seguinte a um ESC. FReadStr bloqueia sem dado, entao em tty o byte e
+// lido com timeout (50 ms) pelo bash: ESC isolado vira Chr(27) sem esperar tecla.
+Static Function QiPeekByte()
+    Local aGot := {}
+    Local cCmd := ""
+    If !lTTY
+        Return FReadStr( hIn, 1 )
+    EndIf
+    cCmd := "IFS= read -rsn1 -t 0.05 k </dev/tty && printf 'K%s\n' " + Chr(34) + "$k" + Chr(34)
+    ProcRun( "bash", { "-c", cCmd }, {|c| AAdd( aGot, c ) } )
+    If Len( aGot ) > 0 .And. Left( aGot[1], 1 ) == "K"
+        Return SubStr( aGot[1], 2, 1 )
+    EndIf
+Return ""
+
 Static Function QiInkey()
     Local cCh := ""
     Local cNx := ""
@@ -4061,7 +4076,7 @@ Static Function QiInkey()
         Return ""
     EndIf
     If cCh == Chr(27)
-        cNx := FReadStr( hIn, 1 )
+        cNx := QiPeekByte()
         If cNx == ""
             Return Chr(27)
         EndIf
